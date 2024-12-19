@@ -1,0 +1,36 @@
+# Packages
+
+TypeScript の最新バージョンを使ってください。
+React 18 系の最新バージョンを使ってください。
+Next.js 14 系の最新バージョンを使ってください。
+Next.js は App Router を使ってください。
+スタイリングは CSS Modules で行います。sass を使ってください。
+アイコンは Remix Icon を使います。
+ESLint と Prettier でコードを静的解析・フォーマットします。
+microCMS の JavaScript SDK を入れてください。
+Cloudflare Pages にデプロイできるよう wrangler や @cloudflare/next-on-pages などそのほか必要なパッケージを入れてください。
+
+# Directory structure
+
+以下のようなディレクトリ構造としてください。
+```
+src
+ |- app // Next.js の App Rotuer に則る
+ |- components
+ |  |- features // 特定の機能に関心のあるコンポーネントを配置する
+ |  |   |- News
+ |  |       |- NewsList
+ |  |           |- NewsList.tsx
+ |  |           |- NewsList.module.scss
+ |  |           |- index.ts
+ |  |- ui // 機能に関心のない純粋な UI を提供するコンポーネントを配置する
+ |     |- Header
+ |        |- Header.tsx
+ |        |- Header.module.scss
+ |        |- index.ts
+ |- constants // 定数を配置する
+ |- domains // ドメインモデルを定義する
+ |- hooks // ドメインモデルごとにカスタムフックを配置する
+ |- services // microCMS など外部サービスの実装を定義する
+ |- styles // 共通スタイルを配置する
+ ```

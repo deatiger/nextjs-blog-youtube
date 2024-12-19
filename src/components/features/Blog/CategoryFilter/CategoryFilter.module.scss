@@ -1,0 +1,26 @@
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.category {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: $light-color;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+
+  &:hover {
+    background-color: darken($light-color, 5%);
+  }
+
+  &.active {
+    background-color: $primary-color;
+    color: white;
+  }
+}
