@@ -1,5 +1,5 @@
 import { createClient } from 'microcms-js-sdk'
-import type { BlogsResponse } from '@/domains/blog'
+import type { BlogsResponse, Blog } from '@/domains/blog'
 
 export const getBlogs = async (
   config: {
