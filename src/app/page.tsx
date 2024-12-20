@@ -17,8 +17,8 @@ export default async function Home({
 }) {
   const env = getRequestContext().env
   const { contents: categories } = await getCategories({
-    serviceDomain: env.MICROCMS_SERVICE_DOMAIN,
-    apiKey: env.MICROCMS_API_KEY,
+    serviceDomain: env.MICROCMS_SERVICE_DOMAIN ?? "",
+    apiKey: env.MICROCMS_API_KEY ?? "",
   })
 
   const filters = searchParams.category

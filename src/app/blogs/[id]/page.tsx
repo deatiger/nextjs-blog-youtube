@@ -15,8 +15,8 @@ export default async function BlogDetail({
 }) {
   const env = getRequestContext().env
   const blog = await getBlog({
-    serviceDomain: env.MICROCMS_SERVICE_DOMAIN,
-    apiKey: env.MICROCMS_API_KEY,
+    serviceDomain: env.MICROCMS_SERVICE_DOMAIN ?? "",
+    apiKey: env.MICROCMS_API_KEY ?? "",
   }, params.id)
 
   return (
