@@ -8,14 +8,14 @@ import styles from './page.module.scss'
 
 const DEFAULT_THUMBNAIL = '/images/default-thumbnail.jpg'
 
-export const runtime = process.env.NODE_ENV === "production" ? "edge" : "nodejs"
+export const runtime = "edge"
 
 export default async function Home({
   searchParams,
 }: {
   searchParams: { category?: string }
 }) {
-  const env = runtime === "edge" ? getRequestContext().env : process.env
+  const env = getRequestContext().env
   const { contents: categories } = await getCategories({
     serviceDomain: env.MICROCMS_SERVICE_DOMAIN,
     apiKey: env.MICROCMS_API_KEY,

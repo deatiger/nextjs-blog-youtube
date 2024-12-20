@@ -8,8 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "pages:build": "next build",
-    "pages:deploy": "wrangler pages deploy .next"
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm pages:build && wrangler pages dev",
+    "deploy": "npm pages:build && wrangler pages deploy"
   },
   "dependencies": {
     "@types/node": "^20.10.4",
